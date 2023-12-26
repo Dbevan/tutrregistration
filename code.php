@@ -1,7 +1,7 @@
 <html><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>YOUR TUTR SESSION'S NAME HERE</title>
-	<link href="includes/registration.css" type="text/css" rel="stylesheet">
+	<link href="registration.css" type="text/css" rel="stylesheet">
     <script language="JavaScript">
      // This code is mostly to prevent someone selecting overlapping classes.
      // You don't need one for every block, only the blocks that conflict with one another. If nothing overlaps, you can delete this entire section.
