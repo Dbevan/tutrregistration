@@ -1,44 +1,7 @@
 <html><head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>YOUR TUTR SESSION'S NAME HERE</title>
-	<link href="includes/style.css" type="text/css" rel="stylesheet">
-	<style>
-    /* Misc. useful shortcuts */
-    .fl { float: left; } .fr { float: right; }
-    .cl { clear: left; } .cr { clear: right; } .cb { clear: both; }
-    .tc { text-align:center; } .tr { text-align: right; } .tl { text-align: left; }
-    
-    /* This code handles css for the calendar, accordian-class info, and registration box. */
-
-    .calendar table { border:2px solid #ddd; font-weight: normal; font-size:90%; background-color: white; margin-bottom: 15px; border-collapse:collapse; width: 100%}
-    .calendar th, td {border-top: 1px solid #ddd; border: 1px solid #ddd; padding: 5px; }
-    .calendar td a {display: block; text-decoration:none;}
-    .calendar td a:hover { text-decoration: underline; }
-    .lunch { background-color: #eee;}
-    .void { background-color: #eee;}
-    .details { display:none; }
-    
-    .details { border:2px solid #243b80; padding: 5px; margin-top: 15px;}
-    .details dt { font-weight: bold; font-size: 110%; color: #243b80; }
-    
-    form { margin-top: 10px;} /* You can specify the Form's width here, otherwise it will be 100% of the div it's put into.*/
-    label { font-weight: bold; display: block; padding-left: 2px; font-size: 90% }
-    input { margin-bottom: 5px; }
-    select { width: 210px; margin-right: 10px; margin-bottom: 10px; }
-    fieldset {border:2px solid #ddd;}
-
-    .fs-header { width: 100%; padding: 3px; text-align: center; background-color:#eee; border:1px solid #ddd; color:black; font-size: 180%;}
-    .personal legend { font-weight: bold; color: black; font-size: 90%; font-family:'Georgia', 'Serif';}
-    .personal { border:none; padding:0; margin:0px; width: 100%}
-    .lift { margin-top: -17px; margin-bottom: 20px; }
-    .form-short {width: 11.35em; margin-right: 5px;}
-    .form-mid {width: 19em; margin-right: 5px;}
-    .form-last {margin-right:0;}
-    .classes legend { text-align:center; width: 100%; font-weight: bold; color: black; font-family:'Georgia', 'Serif'; border-bottom: 2px solid #eee; }
-    .classes {border: none; }
-    .totalcost { clear:left; }
-    .shortname label {padding-right: 1em; font-size: 85%; font-weight: normal; margin-bottom: 20px; }
-    </style>
+	<link href="includes/registration.css" type="text/css" rel="stylesheet">
     <script language="JavaScript">
      // This code is mostly to prevent someone selecting overlapping classes.
      // You don't need one for every block, only the blocks that conflict with one another. If nothing overlaps, you can delete this entire section.
