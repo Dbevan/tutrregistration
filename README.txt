@@ -1,19 +1,23 @@
-Welcome to the University of Tir Righ's unofficial registration code. This code uses PHP and JQuery to offer calendar and registration functions, including conflict-checking for overlapping classes, valid email addresses, and calculation of funds due. It cannot determine if a class has been filled or not; this will be up to the Dean to update.
+Welcome to the University of Tir Righ's unofficial registration code. This code uses PHP to offer calendar and registration functions, including conflict-checking for overlapping classes, valid email addresses, and calculation of funds due. It cannot determine if a class has been filled or not; this will be up to the Dean to update.
 
 If you have never seen an HTML or CSS page in your life, you can try to follow the instructions to edit. The main problem will be intimidation and understanding the design logic; if you have any difficulty, don't hesitate to email Cunegonda at dbevan@topfloor.ca, and she'll be happy to help.
 
 Your package should include the following files:
 
-code.php		A pre-made registration page
+code.php		A pre-made registration page.
 class.phpmailer.php	Mailer code -- DO NOT EDIT
 class.smtp.php		Mailer code -- DO NOT EDIT
-script.js		Jquery code
+script.js		Client-side scripting code.
 submit.php		Mailer code + custom email
 README.TXT		This file. Yep, you have it.
 
-Please use a text editor such as Notepad++ (Windows) or brackets (Mac), or your preferred raw text editor. DO NOT USE WORD. Word will insert formatting that will break things.
+Please use a text editor such as Notepad++ (Windows) or CotEditor (Mac), or your preferred raw/plain text editor. DO NOT USE WORD. Word will insert formatting that will break things.
 
-Before editing, it's advisable you save a backup copy, just in case.
+Before editing, it's advisable you save a backup copy, just in case. If you have PHP installed on your computer you can open a terminal, go to the directory containing these files, and run the following to start a "development time web server" to test without the need to upload to the actual web server:
+
+	php -S '127.0.0.1:8088' -t .
+
+Once this is running you can visit http://localhost:8080/code.php to examine your work.
 
 
 =============================================
@@ -30,7 +34,7 @@ Class Details is displayed using a definition list. Each one gets its own div. I
 
 Finally, the form. The styling can be redone, inputs for personal information can be added or removed. Each start-time should have it’s own select/label combination, with options for each class that begins at that time. Always keep ‘Free Block’ as the first option. If you add or subtract an input, remember to add or subtract it in submit.php as well!
 
-The total cost and submit button doesn’t require modification. Neither does the script call at the bottom.
+The total cost and submit button doesn't require modification. Neither does the script call at the bottom.
 
 =============================================
  2. CUSTOMIZE SUBMIT.PHP
