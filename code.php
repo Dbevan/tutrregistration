@@ -222,7 +222,7 @@ function dropdowns(block) {
 						<dd><input name=expiry id=expiry>
 					</div>
 				</dl>
-
+		
 		<!-- Day 1 Classes -->
 			<!-- Each start time has it's own Block. The 'label' is referred to by the JS code, so if it's different from the display name, make sure you use the LABEL name when editing JS.-->
 			<!-- Copy from <div> to </div>, and paste as many times as needed. Ensure for="block1" is changed to 2, 3, etc, as is name="block1" and id="block1". -->
