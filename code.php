@@ -73,7 +73,7 @@ function dropdowns(block) {
 		<tr>
 			<th>9:00am</th>
 			<td rowspan=1><a href="#class1h">A 1 Hour Class</a></td>
-			<td rowspan=2><a href="#">A 2 Hour Class</a></td>
+			<td rowspan=2><a href="#class2h">A 2 Hour Class</a></td>
 			<td rowspan=3><a href="#">A 3 Hour Class</a></td>
 			<td rowspan=4><a href="#">A 4 Hour Class</a></td>
 		</tr>
@@ -119,7 +119,7 @@ function dropdowns(block) {
 <section id=details>
 	<!-- This is where the details are hidden. You can copy from <div> to </div> on one of the examples below, and just paste and fill out the appropriate information. -->
 	<!-- Copy from <details... to </details> below and update; the <details id> must be unique and referenced by the <a href> of the class' title, above. -->
-	<details id="class1h" open>
+	<details id="class1h">
 		<summary><h2>A 1 Hour Class<!-- CLASS NAME --></h2></summary>
 		
 		<dl><!-- Place definitions in the <dd> below the value to define. -->
@@ -153,6 +153,40 @@ function dropdowns(block) {
 		</ol>
 	</details>
 	<!-- Copy from </details> to <details... above. -->
+	
+	<details id="class2h">
+		<summary><h2>A 2 Hour Class<!-- CLASS NAME --></h2></summary>
+		
+		<dl><!-- Place definitions in the <dd> below the value to define. -->
+			<h3>Details</h3>
+			
+			<dt>Time
+			<dd>0:00
+			
+			<dt>Instructor
+			<dd>Don Don McDonald of Donaland
+			
+			<dt>Fee
+			<dd>$0
+			
+			<dt>№ Students
+			<dd>27
+		</dl>
+		
+		<p>
+			<!-- CLASS DESCRIPTION - Use multiple <p>aragraphs as needed. -->
+			Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper.
+		
+		<h3>Requirements/Materials</h3>
+		<ol>
+			<!-- STUDENT REQUIREMENTS/MATERIALS LIST -->
+			<li>Sed posuere consectetur est at lobortis.
+			<li>Nullam id dolor id nibh ultricies vehicula ut id elit.
+			<li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+			<li>Etiam porta sem malesuada magna mollis euismod.
+			<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+		</ol>
+	</details>
 </section><!-- This ends the course details section; paste new class descriptions ABOVE this /section. -->
 
 <section id=form><!-- Registration Form -->
@@ -162,43 +196,33 @@ function dropdowns(block) {
 				
 				<!-- Personal Details -->
 				<!-- 'Personal' is a fieldset, rather than a div or span so we can css the 'Name' legend and 'firstname' 'lastname' labels differently. Name, phone and email fields. -->
-				<fieldset class=personal>
-					<legend>Name</legend>
-					<dl>
-						<div class=name>
-							<dd><label for=firstname>First</label>
-							<dt><input name=firstname id=firstname>
-							
-							<dd><label for=lastname>Last</label>
-							<dt><input name=lastname id=lastname>
-						</div>
-						<div id=identity>
-							<dt><label for=scaname>SCA name</label>
-							<dd><input name=scaname id=scaname class=form-mid>
-						</div>
-						<div>
-							<dt><label for=phone>Phone</label>
-							<dd><input type=phone name=phone id=phone>
-						</div>
-						<div>
-							<dt><label for=email>Email</label>
-							<dd><input type=email name=email id=email autocapitalize=off autocorrect=off spellcheck=false pattern="^([a-z0-9\.\-+_!#$%&'\/=`|~?^{}*]+)@[\w]+([\w\.\-]+\w)?$">
-						</div>
-						<div>
-							<dt><label for=branch>Branch</label>
-							<dd><input name=branch id=branch>
-						</div>
-						<div>
-							<dt><label for=membership>Membership #</label>
-							<dd><input name=membership id=membership>
-						</div>
-						<div>
-							<dt><label for=expiry>Membership Exp.</label>
-							<dd><input name=expiry id=expiry>
-						</div>
-					</dl>
-				</fieldset>
-
+				<dl>
+					<div class=name>
+						<dt><label for=firstname>First Name</label>
+						<dd><input name=firstname id=firstname>
+						<dt><label for=lastname>Last Name</label>
+						<dd><input name=lastname id=lastname>
+					</div>
+					<div id=identity>
+						<dt><label for=scaname>SCA name</label>
+						<dd><input name=scaname id=scaname>
+						<dt><label for=branch>Branch</label>
+						<dd><input name=branch id=branch>
+					</div>
+					<div>
+						<dt><label for=phone>Phone</label>
+						<dd><input type=phone name=phone id=phone>
+						<dt><label for=email>Email</label>
+						<dd><input type=email name=email id=email autocapitalize=off autocorrect=off spellcheck=false pattern="^([a-z0-9\.\-+_!#$%&'\/=`|~?^{}*]+)@[\w]+([\w\.\-]+\w)?$">
+					</div>
+					<div>
+						<dt><label for=membership>Membership #</label>
+						<dd><input name=membership id=membership>
+						<dt><label for=expiry>Membership Exp.</label>
+						<dd><input name=expiry id=expiry>
+					</div>
+				</dl>
+		
 		<!-- Day 1 Classes -->
 			<!-- Each start time has it's own Block. The 'label' is referred to by the JS code, so if it's different from the display name, make sure you use the LABEL name when editing JS.-->
 			<!-- Copy from <div> to </div>, and paste as many times as needed. Ensure for="block1" is changed to 2, 3, etc, as is name="block1" and id="block1". -->
