@@ -1,18 +1,7 @@
 "use strict";
 (function(){
 	
-	// Each class must have a line in this object whose name matches the labels from the code.php file.
-	var prices = {  // Price associated with each class, by name.
-			"Free Block": 0.00,  // Keep this.
-			"Class 1": 3.00,
-			"Class 2": 2.00,
-			"Class 3": 5.00,
-			"Class 4": 50.00,
-		}
-	
-	// In case of reload, we need the drop-down class selection and cost to reset. Also, we don't want anyone to edit cost by hand.
-	
-	function clear_form() {
+	function clear_form() {  // Reset values to defaults on page (re)load.
 		cost.value = "0"
 		cost.disabled = true
 		
@@ -20,23 +9,20 @@
 			elem.value = 'Free Block'
 	}
 	
-	// Toggle presentation of a specifically targeted 
-	function toggle(target) {
+	function toggle(target) {  // Toggle presentation of a specifically targeted.
 		for ( let elem of document.querySelectorAll('details[open]') ) elem.close()  // Hide all visible details.
 		
 		// Display details for the one the user clicked.
 		document.getElementById(e.target.href.substr(1)).open()
 	}
 	
-	function dropdowns() {
-		// This code re-calculates cost anytime a change is made.
-		var totalcost = 0
+	function dropdowns() {  // Re-calculate the cost on selection change.
+		var total = 0
 		
-		for ( let elem of document.querySelectorAll('select.block') )
-			totalcost += prices[elem.value]
+		for ( let elem of document.querySelectorAll('.classes select') )
+			total += parseFloat(document.getElementById(elem.value) ? document.getElementById(elem.value).dataset.price : 0)
 		
-		cost.value = totalcost
-		hiddencost.value = totalcost
+		cost.value = total
 	}
 	
 	function validate_email(address) {
@@ -89,9 +75,18 @@
 	document.addEventListener('click', e => {
 		if ( !e.target.matches('#calendar a') ) return
 		
-		for ( let detail of document.querySelectorAll('details') ) detail.open = false
-		document.querySelector(e.target.getAttribute('href')).open = true
+		for ( let detail of document.querySelectorAll('#details details') ) detail.open = false
+		let target = document.querySelector(e.target.getAttribute('href'))
+		target.open = true
+		e.preventDefault()
+		e.stopPropagation()
 	})
+
+	for ( let elem of document.querySelectorAll('#details details') )
+		elem.addEventListener("toggle", e => {
+			if ( e.target.open ) e.target.scrollIntoView()
+			else calendar.scrollIntoView()
+		})
 	
 	/*
 	$('#caltop a').click(function(){
