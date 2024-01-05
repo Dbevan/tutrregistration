@@ -73,7 +73,7 @@ function dropdowns(block) {
 		<tr>
 			<th>9:00am</th>
 			<td rowspan=1><a href="#class1h">A 1 Hour Class</a></td>
-			<td rowspan=2><a href="#">A 2 Hour Class</a></td>
+			<td rowspan=2><a href="#class2h">A 2 Hour Class</a></td>
 			<td rowspan=3><a href="#">A 3 Hour Class</a></td>
 			<td rowspan=4><a href="#">A 4 Hour Class</a></td>
 		</tr>
@@ -119,7 +119,7 @@ function dropdowns(block) {
 <section id=details>
 	<!-- This is where the details are hidden. You can copy from <div> to </div> on one of the examples below, and just paste and fill out the appropriate information. -->
 	<!-- Copy from <details... to </details> below and update; the <details id> must be unique and referenced by the <a href> of the class' title, above. -->
-	<details id="class1h" open>
+	<details id="class1h">
 		<summary><h2>A 1 Hour Class<!-- CLASS NAME --></h2></summary>
 		
 		<dl><!-- Place definitions in the <dd> below the value to define. -->
@@ -153,6 +153,40 @@ function dropdowns(block) {
 		</ol>
 	</details>
 	<!-- Copy from </details> to <details... above. -->
+	
+	<details id="class2h">
+		<summary><h2>A 2 Hour Class<!-- CLASS NAME --></h2></summary>
+		
+		<dl><!-- Place definitions in the <dd> below the value to define. -->
+			<h3>Details</h3>
+			
+			<dt>Time
+			<dd>0:00
+			
+			<dt>Instructor
+			<dd>Don Don McDonald of Donaland
+			
+			<dt>Fee
+			<dd>$0
+			
+			<dt>№ Students
+			<dd>27
+		</dl>
+		
+		<p>
+			<!-- CLASS DESCRIPTION - Use multiple <p>aragraphs as needed. -->
+			Sed posuere consectetur est at lobortis. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper.
+		
+		<h3>Requirements/Materials</h3>
+		<ol>
+			<!-- STUDENT REQUIREMENTS/MATERIALS LIST -->
+			<li>Sed posuere consectetur est at lobortis.
+			<li>Nullam id dolor id nibh ultricies vehicula ut id elit.
+			<li>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+			<li>Etiam porta sem malesuada magna mollis euismod.
+			<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+		</ol>
+	</details>
 </section><!-- This ends the course details section; paste new class descriptions ABOVE this /section. -->
 
 <section id=form><!-- Registration Form -->
