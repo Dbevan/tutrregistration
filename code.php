@@ -196,42 +196,32 @@ function dropdowns(block) {
 				
 				<!-- Personal Details -->
 				<!-- 'Personal' is a fieldset, rather than a div or span so we can css the 'Name' legend and 'firstname' 'lastname' labels differently. Name, phone and email fields. -->
-				<fieldset class=personal>
-					<legend>Name</legend>
-					<dl>
-						<div class=name>
-							<dd><label for=firstname>First</label>
-							<dt><input name=firstname id=firstname>
-							
-							<dd><label for=lastname>Last</label>
-							<dt><input name=lastname id=lastname>
-						</div>
-						<div id=identity>
-							<dt><label for=scaname>SCA name</label>
-							<dd><input name=scaname id=scaname class=form-mid>
-						</div>
-						<div>
-							<dt><label for=phone>Phone</label>
-							<dd><input type=phone name=phone id=phone>
-						</div>
-						<div>
-							<dt><label for=email>Email</label>
-							<dd><input type=email name=email id=email autocapitalize=off autocorrect=off spellcheck=false pattern="^([a-z0-9\.\-+_!#$%&'\/=`|~?^{}*]+)@[\w]+([\w\.\-]+\w)?$">
-						</div>
-						<div>
-							<dt><label for=branch>Branch</label>
-							<dd><input name=branch id=branch>
-						</div>
-						<div>
-							<dt><label for=membership>Membership #</label>
-							<dd><input name=membership id=membership>
-						</div>
-						<div>
-							<dt><label for=expiry>Membership Exp.</label>
-							<dd><input name=expiry id=expiry>
-						</div>
-					</dl>
-				</fieldset>
+				<dl>
+					<div class=name>
+						<dt><label for=firstname>First Name</label>
+						<dd><input name=firstname id=firstname>
+						<dt><label for=lastname>Last Name</label>
+						<dd><input name=lastname id=lastname>
+					</div>
+					<div id=identity>
+						<dt><label for=scaname>SCA name</label>
+						<dd><input name=scaname id=scaname>
+						<dt><label for=branch>Branch</label>
+						<dd><input name=branch id=branch>
+					</div>
+					<div>
+						<dt><label for=phone>Phone</label>
+						<dd><input type=phone name=phone id=phone>
+						<dt><label for=email>Email</label>
+						<dd><input type=email name=email id=email autocapitalize=off autocorrect=off spellcheck=false pattern="^([a-z0-9\.\-+_!#$%&'\/=`|~?^{}*]+)@[\w]+([\w\.\-]+\w)?$">
+					</div>
+					<div>
+						<dt><label for=membership>Membership #</label>
+						<dd><input name=membership id=membership>
+						<dt><label for=expiry>Membership Exp.</label>
+						<dd><input name=expiry id=expiry>
+					</div>
+				</dl>
 
 		<!-- Day 1 Classes -->
 			<!-- Each start time has it's own Block. The 'label' is referred to by the JS code, so if it's different from the display name, make sure you use the LABEL name when editing JS.-->
