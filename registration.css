@@ -17,7 +17,18 @@
 details {
 	border: 2px solid #243b80; padding: 5px; margin-top: 15px;
 	
-	summary { display: inline-block; }
+	summary {
+		display: inline-block;
+		
+		&::before {
+			display: inline-block;
+			content: '❌';
+			margin-right: 1ex;
+			vertical-align: top;
+		}
+		
+		&::-webkit-details-marker { display: none; }
+	}
 	h2 { display: inline-block; margin: 0; }
 	dl {
 		float: right;
