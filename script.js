@@ -81,10 +81,16 @@
 	clear_form()
 	registration.addEventListener('submit', validate_form)
 	
-	// The following is equivalent to the jQuery: $('select[name^="block"]').change(...)
 	document.addEventListener('change', e => {
 		if ( !e.target.matches('select[name^="block"]') ) return
-		dropdowns(e.target.name)
+		dropdowns(e.target.name)  // Re-calculate costs.
+	})
+	
+	document.addEventListener('click', e => {
+		if ( !e.target.matches('#calendar a') ) return
+		
+		for ( let detail of document.querySelectorAll('details') ) detail.open = false
+		document.querySelector(e.target.getAttribute('href')).open = true
 	})
 	
 	/*
