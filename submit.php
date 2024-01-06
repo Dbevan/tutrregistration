@@ -2,6 +2,33 @@
 <title></title>
 <?php
 
+$courses = array(
+		"fweave" => "Intro to Fingerweaving",
+		"chpaint" => "Intro to Charter Painting",
+		"thobe" => "Patterning a Thobe",
+		"bowstr" => "Making a Flemish Twist Bowstring",
+		"butt" => "Buttons",
+		"calig" => "Spacing for Calligraphy",
+		"doc" => "Intro to Documentation",
+		"chiv" => "Chivalry & Etiquette",
+		"thread" => "Drawn Threadwork",
+		"uncial" => "Uncial Calligraphy",
+		"calc" => "Medieval Calculus",
+		"bardic" => "Intro to Bardic & Performing Arts",
+		"sprang" => "Språng Basics",
+		"runes" => "Intro to Reading & Writing Runes",
+		"book" => "Device Concealment Book",
+		"dance" => "16th C. Italian Dance",
+		"survive" => "Events - Surviving & Thriving",
+		"tstitch" => "Tapestry Stitch",
+		"vice" => "Vice With Cards & Dice",
+		"flatcap" => "Tudor/Renaissance Flat Cap",
+		"spoons" => "Intro to Spoon Carving",
+		"chevron" => "Fingerweaving Chevrons",
+		"charter" => "Intro to Charter Design",
+		"ice" => "Making Ice in the Desert",
+	);
+
 require_once('class.phpmailer.php');
 
 $transactID = rand(1000, 5000);  // Not guaranteed to be unique.
@@ -21,8 +48,7 @@ try {
 	$mail->AddAddress($_POST['email'], 'Student');  // XXX: Harden
 	$mail->AddAddress('<!-- YOUR EMAIL HERE -->', 'Class Organizer');
 	$mail->SetFrom('<!-- YOUR EMAIL HERE -->', 'Class Organizer');
-	$mail->AddBCC('<!-- OPTIONAL CO-ORGANIZER EMAIL HERE -->', 'Registrar');
-	$mail->Subject = '[<!-- YOUR EVENT NAME HERE -->] Registration ID: ' . $transactID;
+	$mail->Subject = '[Hartwood TUTR 2024] Registration ID: ' . $transactID;
 	$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
 	
 	ob_start();
@@ -47,15 +73,14 @@ try {
 		<?= print_r($_POST); ?><!-- For testing purposes -->
 		<h3><!-- NAME OF EVENT --></h3>
 		<h4><!-- LOCATION, DATE --></h4>
-		<p style="clear:left; margin-top: 15px;">Thank you for your registration! Our Registrar has been notified of your selections, and will confirm class availability via an email to <?= $_POST['email']; ?>. Once confirmed, please send a check payable to '<!-- EXCHEQUER WILL TELL YOU-->' by <!-- DATE--> to:</p>
-		<dl>
-			<dt><!-- NAME--></dt>
-			<dd><!-- STREET--></dd>
-			<dd><!-- CITY-->, BC</dd>
-			<dd><!-- POSTAL--></dd>
-		</dl>
-		<p>If paying for multiple registrations on one cheque, please include the order IDs. An event fee of <!-- FEE--> will be charged at gate; those with proof of SCA membership will receive a $5 discount. The event will be held at <!-- ADDRESS-->; please see the <a href="<!-- YOUR PAGE-->">calendar page</a> for additional site details and contacts.</p>
-		<p>We look forward to seeing you there!</p>
+		<p style="clear:left; margin-top: 15px;">
+			Thank you for your registration! Our Registrar has been notified of your selections, and will confirm class availability via an email to <?= $_POST['email']; ?>. Students will pay the instructors directly at the beginning of class. Please bring exact cash if at all possible.
+		<p>
+			An event fee of <!-- FEE--> will be charged at gate; those with proof of SCA membership will receive a $5 discount. The event will be held at the Navy League of Canada Hall at 949 5th St, Nanaimo, BC V9R, Canada.
+		<p>
+			For enquiries about classes, contact the registrar <a href="mailto:hartwood.tutr@tirrigh.org">by email</a>. For enquiries about the event itself, please email or visit the <a href="https://fb.me/e/4ZIiJU1js">Facebook page</a> for additional site details and contacts.
+		<p>
+			We look forward to seeing you there!
 		<table>
 			<tr>
 				<th class="header underline" colspan="2">Registration</th>
@@ -91,16 +116,46 @@ try {
 			<tr>
 				<th class="header underline" colspan="2">Saturday Classes</th>
 			</tr>
+		</table>
 			<!-- Display class selections below. There must be one TR unit per drop-down on code.ph, and the label you use with _POST must match the ID of the select you're calling. -->
+		<h3>Saturday, Feb 3rd</h3>
+		<table>
 			<tr>
-				<th class="header" ><!-- Start time--></th>
-				<td><?= $_POST['block1']; ?></td>
+				<th class="header">09:00</th>
+				<td><?= $courses[$_POST['block1']]; ?></td>
+			</tr>
+			<tr>
+				<th class="header">11:00</th>
+				<td><?= $courses[$_POST['block2']]; ?></td>
+			</tr>
+			<tr>
+				<th class="header">13:00</th>
+				<td><?= $courses[$_POST['block3']]; ?></td>
+			</tr>
+			<tr>
+				<th class="header">15:00</th>
+				<td><?= $courses[$_POST['block4']]; ?></td>
+			</tr>
+			<tr>
+				<th class="header">16:00</th>
+				<td><?= $courses[$_POST['block5']]; ?></td>
+			</tr>
+		</table>
+		<h3>Sunday, Feb 4rd</h3>
+		<table>
+			<tr>
+				<th class="header">09:00</th>
+				<td><?= $courses[$_POST['block6']]; ?></td>
+			</tr>
+			<tr>
+				<th class="header">11:00</th>
+				<td><?= $courses[$_POST['block7']]; ?></td>
 			</tr>
 			
 			<!-- Copy and paste for additional class blocks ABOVE this line -->
 			<tr>
-				<th class="header" >Total:</th>
-				<td>&#36;<?= $_POST['hiddencost']; ?></td>
+				<th class="header">Total:</th>
+				<td>&#36;<?= $_POST['cost']; ?></td>
 			</tr>
 		</table>
 	</body>

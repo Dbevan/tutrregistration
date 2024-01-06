@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang=en>
-<title>YOUR TUTR SESSION'S NAME HERE</title>
+<title>Hartwood TUTR 2024</title>
 <link rel=stylesheet href=registration.css>
 
 <script>
@@ -27,8 +27,14 @@ function dropdowns(block) {
 }
 </script>
 
-<h1>TUTR SESSION TITLE HERE</h1>
-<!-- If you want to write something about your session, such as when registration closes, where to send cheques to, or link to it's Calendar page, this is the place to do it. A date and location are probably bare minimums.-->
+<h1>Hartwood TUTR 2024</h1>
+<p>
+	Join the Shire of Hartwood and The University of Tir Righ for an SCA educational weekend of classes on dance, making textiles, creating ice in the desert, and so much more. Includes classes for newcomers and those who'd like a refresher!
+<p>
+	Registration closes January 30 (unless otherwise noted in the class description) to give instructors time to prepare materials and handouts. Students will pay the instructors directly at the beginning of class. Please bring exact cash if at all possible.
+<p>
+	If you have questions, please <a href="mailto:hartwood.tutr@tirrigh.org?subject=TUTR-2024">e-mail the registrar</a> or post your inquiry to the <a href="https://fb.me/e/4ZIiJU1js">Hartwood TUTR 2024 Facebook page</a>.
+<p>
 
 <section id=calendar>
 	<table cellspacing=0>
@@ -455,7 +461,7 @@ function dropdowns(block) {
 		<p>
 			Math was just as important to pre-16th century people as it is today. They used advanced mathematics, such as calculus, to track the movement of planets and stars as far back as 350BC. In this class we will discuss the theory and history of calculus, work through three examples of ancient calculus, and discuss the historical context of each example. This class is designed to be approachable to anyone, no matter their mathematical skills or experience, so bring your pencils and have fun in a math class!
 		
-		<h3>Requirements/Materials</h3> <!— If there are none, delete from <h3> to </ol> -->
+		<h3>Requirements/Materials</h3>
 		<ul>
 			<li>students should bring a pencil and eraser
 		</ul>
@@ -544,9 +550,9 @@ function dropdowns(block) {
 			Students will receive a copy of the primary reader “Fun with Bjorn and Isa” and learn how to read and write Germanic (Futhark) runes.
 		
 		<h3>Requirements/Materials</h3>
-		<ol>
+		<ul>
 			<li>Students should bring note taking materials.
-		</ol>
+		</ul>
 	</details>
 
 	<details id=book data-price=5>
@@ -610,7 +616,7 @@ function dropdowns(block) {
 		</ul>
 	</details>
 
-	<details id=surive data-price=0>
+	<details id=survive data-price=0>
 		<summary><h2>Events: Surviving & Thriving (Novus 1)</h2></summary>
 		
 		<dl>
@@ -670,9 +676,9 @@ function dropdowns(block) {
 			Those who successfully finish a sampler are welcome to volunteer to work on a piece of the Seagirt Tapestry and add to the embroidered history of the Barony.
 		
 		<h3>Requirements/Materials</h3>
-		<ol>
+		<ul>
 			<li>students should bring scissors if they can
-		</ol>
+		</ul>
 	</details>
 
 	<details id=vice data-price=0>

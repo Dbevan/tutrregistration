@@ -55,25 +55,54 @@ fieldset { border: 2px solid #ddd; }
 #registration {
 	input { width: 100%; box-sizing: border-box; }
 	
-	div {
+	> fieldset > dl dd { margin-left: 0; }
+	
+	/*
+	> fieldset > dl {
 		display: flex;
-		flex-direction: column;
-		
-		+ div, dt:not(:first-child) { margin-top: 1em; }
-		dd { margin-left: 0; }
+
+		& > div {
+			flex: 1 1;
+			display: flex;
+			flex-direction: column;
+			
+			+ div, dt:not(:first-child) { margin-top: 1em; }
+			dd { margin-left: 0; }
+		}
+	}
+	*/
+
+	.classes {
+		border: none;
+
+		legend { text-align:center; width: 100%; font-weight: bold; color: black; font-family:'Georgia', 'Serif'; border-bottom: 2px solid #eee; }
+
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+
+			div { flex: 0 1; width: fit-content; }
+			dd { margin-left: 0; }
+		}
+
 	}
 }
 
 
 .fs-header { width: 100%; padding: 3px; text-align: center; background-color:#eee; border:1px solid #ddd; color:black; font-size: 180%;}
-.personal legend { font-weight: bold; color: black; font-size: 90%; font-family:'Georgia', 'Serif';}
-.personal { border:none; padding:0; margin:0px; width: 100%}
+.personal {
+	border:none;
+	padding:0;
+	margin:0px;
+	width: 100%;
+
+	legend { font-weight: bold; color: black; font-size: 90%; font-family:'Georgia', 'Serif';}
+}
+
 .lift { margin-top: -17px; margin-bottom: 20px; }
 .form-short {width: 11.35em; margin-right: 5px;}
 .form-mid {width: 19em; margin-right: 5px;}
 .form-last {margin-right:0;}
-.classes legend { text-align:center; width: 100%; font-weight: bold; color: black; font-family:'Georgia', 'Serif'; border-bottom: 2px solid #eee; }
-.classes {border: none; }
 .totalcost { clear:left; }
 .shortname label {padding-right: 1em; font-size: 85%; font-weight: normal; margin-bottom: 20px; }
 

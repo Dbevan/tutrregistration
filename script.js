@@ -16,7 +16,7 @@
 		document.getElementById(e.target.href.substr(1)).open()
 	}
 	
-	function dropdowns() {  // Re-calculate the cost on selection change.
+	function calculate() {  // Re-calculate the cost on selection change.
 		var total = 0
 		
 		for ( let elem of document.querySelectorAll('.classes select') )
@@ -69,7 +69,8 @@
 	
 	document.addEventListener('change', e => {
 		if ( !e.target.matches('select[name^="block"]') ) return
-		dropdowns(e.target.name)  // Re-calculate costs.
+		dropdowns(e.target.name)
+		calculate()  // Re-calculate costs.
 	})
 	
 	document.addEventListener('click', e => {
