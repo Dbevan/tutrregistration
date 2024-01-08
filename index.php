@@ -38,87 +38,96 @@ function dropdowns(block) {
 
 <section id=calendar>
 	<table cellspacing=0>
+		<!-- each <thead> + <tbody> represents one day of activities -->
 		<!-- rowspan represents #hours: a 2 hour class will have a rowspan of 2. Delete the matching class for the other timeslots it covers. Example: your first track 1 class is 3 hours. Delete the lines for track 1 class 2 and track 1 class 3.-->
 		<!-- colspan represents a break that spans all tracks. Put it in whatever timeslot you like; I've used pm just as an example.-->
 		<!-- If there is a blank space where one track isn't doing anything, while others are, simply leave an empty <td></td> in the 'empty' time slot. You can use the class 'void', if using provided css.-->
-		<tr>
-			<th colspan=5>Saturday</th> <!-- colspan is max # of tracks + 1 for the hour listing. 5 would accommodate 4 simultaneous classes. -->
-		</tr>
-		<tr>
-			<th>9:00</th>
-			<td rowspan=2><a href="#fweave">Intro to Fingerweaving</a></td>
-			<td rowspan=2><a href="#chpaint">Intro to Charter Painting</a></td>
-			<td rowspan=2><a href="#thobe">Patterning a Thobe</a></td>
-			<td rowspan=2><a href="#bowstr">Making a Flemish Twist Bowstring</a></td>
-		</tr>
-		<tr>
-			<th>10:00</th>
-		</tr>
-		<tr>
-			<th>11:00</th>
-			<td rowspan=1><a href="#butt">Buttons</a></td>
-			<td rowspan=1><a href="#calig">Spacing for Calligraphy</a></td>
-			<td rowspan=1><a href="#doc">Intro to Documentation</a></td>
-			<td rowspan=1><a href="#chiv">Chivalry &amp; Etiquette</a></td>
-		</tr>
-		<tr>
-			<th>12:00</th>
-			<td rowspan=1 colspan=4 class=void>Lunch</td>
-		</tr>
-		<tr>
-			<th>13:00</th>
-			<td rowspan=2><a href="#thread">Drawn Threadwork</a></td>
-			<td rowspan=2><a href="#uncial">Uncial Calligraphy</a></td>
-			<td rowspan=2><a href="#calc">Medieval Calculus</a></td>
-			<td rowspan=2><a href="#bardic">Intro to Bardic &amp; Performing Arts</a></td>
-		</tr>
-		<tr>
-			<th>14:00</th>
-		</tr>
-		<tr>
-			<th>15:00</th>
-			<td rowspan=2><a href="#sprang">Språng Basics</a></td>
-			<td rowspan=1><a href="#runes">Intro to Reading &amp; Writing Runes</a></td>
-			<td rowspan=2><a href="#book">Device Concealment Book</a></td>
-			<td rowspan=2><a href="#dance">16th C. Italian Dance</a></td>
-		</tr>
-		<tr>
-			<th>16:00</th>
-			<td rowspan=1><a href="#survive">Events - Surviving &amp; Thriving</a></td>
-		</tr>
-		<tr>
-			<th>17:00</th>
-			<td rowspan=1 colspan=4 class=void>Potluck Preparation</td>
-		</tr>
-		<tr>
-			<th>18:00</th>
-			<td rowspan=1 colspan=4 class=void>Potluck</td>
-		</tr>
-
-		<tr>
-			<th colspan=5>Sunday</th>
-		</tr>
-		<tr>
-			<th>9:00</th>
-			<td rowspan=2><a href="#tstitch">Bayeux Tapestry Stitch</a></td>
-			<td rowspan=2><a href="#vice">Vice with Cards &amp; Dice</a></td>
-			<td rowspan=2><a href="#flatcap">Tudor/Renaissance Flat Cap</a></td>
-			<td rowspan=2><a href="#spoons">Intro to Spoon Carving</a></td>
-		</tr>
-		<tr>
-			<th>10:00</th>
-		</tr>
-		<tr>
-			<th>11:00</th>
-			<td rowspan=1><a href="#chevron">Fingerweaving Chevrons</a></td>
-			<td rowspan=1><a href="#charter">Intro to Charter Design</a></td>
-			<td rowspan=1><a href="#ice">Making Ice in the Desert</a></td>
-			<td rowspan=1 class="void"></td>
-		</tr>
-		<tr>
-			<th>12:00</th>
-			<td rowspan=1 colspan=4 class=void>Lunch &amp; Cleanup</td>
-		</tr>
+		<thead>
+			<tr>
+				<th colspan=5>Saturday</th><!-- colspan is max # of tracks + 1 for the hour listing. 5 would accommodate 4 simultaneous classes. -->
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>9:00</th>
+				<td rowspan=2><a href="#fweave">Intro to Fingerweaving</a></td>
+				<td rowspan=2><a href="#chpaint">Intro to Charter Painting</a></td>
+				<td rowspan=2><a href="#thobe">Patterning a Thobe</a></td>
+				<td rowspan=2><a href="#bowstr">Making a Flemish Twist Bowstring</a></td>
+			</tr>
+			<tr>
+				<th>10:00</th>
+			</tr>
+			<tr>
+				<th>11:00</th>
+				<td rowspan=1><a href="#butt">Buttons</a></td>
+				<td rowspan=1><a href="#calig">Spacing for Calligraphy</a></td>
+				<td rowspan=1><a href="#doc">Intro to Documentation</a></td>
+				<td rowspan=1><a href="#chiv">Chivalry &amp; Etiquette</a></td>
+			</tr>
+			<tr>
+				<th>12:00</th>
+				<td rowspan=1 colspan=4 class=void>Lunch</td>
+			</tr>
+			<tr>
+				<th>13:00</th>
+				<td rowspan=2><a href="#thread">Drawn Threadwork</a></td>
+				<td rowspan=2><a href="#uncial">Uncial Calligraphy</a></td>
+				<td rowspan=2><a href="#calc">Medieval Calculus</a></td>
+				<td rowspan=2><a href="#bardic">Intro to Bardic &amp; Performing Arts</a></td>
+			</tr>
+			<tr>
+				<th>14:00</th>
+			</tr>
+			<tr>
+				<th>15:00</th>
+				<td rowspan=2><a href="#sprang">Språng Basics</a></td>
+				<td rowspan=1><a href="#runes">Intro to Reading &amp; Writing Runes</a></td>
+				<td rowspan=2><a href="#book">Device Concealment Book</a></td>
+				<td rowspan=2><a href="#dance">16th C. Italian Dance</a></td>
+			</tr>
+			<tr>
+				<th>16:00</th>
+				<td rowspan=1><a href="#survive">Events - Surviving &amp; Thriving</a></td>
+			</tr>
+			<tr>
+				<th>17:00</th>
+				<td rowspan=1 colspan=4 class=void>Potluck Preparation</td>
+			</tr>
+			<tr>
+				<th>18:00</th>
+				<td rowspan=1 colspan=4 class=void>Potluck</td>
+			</tr>
+		</tbody>
+		
+		<thead>
+			<tr>
+				<th colspan=5>Sunday</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>9:00</th>
+				<td rowspan=2><a href="#tstitch">Bayeux Tapestry Stitch</a></td>
+				<td rowspan=2><a href="#vice">Vice with Cards &amp; Dice</a></td>
+				<td rowspan=2><a href="#flatcap">Tudor/Renaissance Flat Cap</a></td>
+				<td rowspan=2><a href="#spoons">Intro to Spoon Carving</a></td>
+			</tr>
+			<tr>
+				<th>10:00</th>
+			</tr>
+			<tr>
+				<th>11:00</th>
+				<td rowspan=1><a href="#chevron">Fingerweaving Chevrons</a></td>
+				<td rowspan=1><a href="#charter">Intro to Charter Design</a></td>
+				<td rowspan=1><a href="#ice">Making Ice in the Desert</a></td>
+				<td rowspan=1 class="void"></td>
+			</tr>
+			<tr>
+				<th>12:00</th>
+				<td rowspan=1 colspan=4 class=void>Lunch &amp; Cleanup</td>
+			</tr>
+		</tbody>
 	</table>
 </section>
 
@@ -861,127 +870,143 @@ function dropdowns(block) {
 
 <section id=form><!-- Registration Form -->
 	 <form action=submit.php method=post id=registration>
-			<fieldset><!-- The outer fieldset, containing the details, day one classes, day two classes, and the cost/submit/reset fields. -->
-				<legend><h2>Registration</h2></legend>
-				
-				<!-- Personal Details -->
-				<!-- 'Personal' is a fieldset, rather than a div or span so we can css the 'Name' legend and 'firstname' 'lastname' labels differently. Name, phone and email fields. -->
-				<dl>
-					<div class=name>
+		<input type=hidden name=cost id=cost value=0>
+		
+		<fieldset><!-- The outer fieldset, containing the details, day one classes, day two classes, and the cost/submit/reset fields. -->
+			<legend><h2>Registration</h2></legend>
+			
+			<!-- Personal Details -->
+			<!-- 'Personal' is a fieldset, rather than a div or span so we can css the 'Name' legend and 'firstname' 'lastname' labels differently. Name, phone and email fields. -->
+			<dl>
+				<div class=name>
+					<div class=field>
 						<dt><label for=firstname>First Name</label>
 						<dd><input name=firstname id=firstname>
+					</div>
+					<div class=field>
 						<dt><label for=lastname>Last Name</label>
 						<dd><input name=lastname id=lastname>
 					</div>
-					<div id=identity>
+				</div>
+				<div id=identity>
+					<div class=field>
 						<dt><label for=scaname>SCA name</label>
 						<dd><input name=scaname id=scaname>
+					</div>
+					<div class=field>
 						<dt><label for=branch>Branch</label>
 						<dd><input name=branch id=branch>
 					</div>
-					<div>
+				</div>
+				<div>
+					<div class=field>
 						<dt><label for=phone>Phone</label>
 						<dd><input type=phone name=phone id=phone>
+					</div>
+					<div class=field>
 						<dt><label for=email>Email</label>
 						<dd><input type=email name=email id=email autocapitalize=off autocorrect=off spellcheck=false pattern="^([a-z0-9\.\-+_!#$%&'\/=`|~?^{}*]+)@[\w]+([\w\.\-]+\w)?$">
 					</div>
-					<div>
+				</div>
+				<div>
+					<div class=field>
 						<dt><label for=membership>Membership #</label>
 						<dd><input name=membership id=membership>
+					</div>
+					<div class=field>
 						<dt><label for=expiry>Membership Exp.</label>
 						<dd><input name=expiry id=expiry>
 					</div>
-				</dl>
+				</div>
+			</dl>
+		
+			<fieldset class=day>
+				<legend>Saturday</legend>
 				
-				<fieldset> <!-- Contains the class and cost fieldsets. -->
-					<fieldset class=classes>
-						<legend>Saturday</legend>
-						
-						<dl>
-							<div>
-								<dt><label for=block1>Block 1:<br />9:00 Start</label>
-								<dd><select name=block1 id=block1>
-									<option value="" selected>Free Block
-									<option value=fweave>Fingerweaving
-									<option value=chpaint>Charter Painting
-									<option value=thobe>Patterning a Thobe
-									<option value=bowstr>Flemish Bowstring
-								</select>
-							</div>
-							<div>
-								<dt><label for=block2>Block 2:<br />11:00 Start</label>
-								<dd><select name=block2 id=block2>
-									<option value="" selected>Free Block
-									<option value=butt>Buttons
-									<option value=calig>Spacing for Calligraphy
-									<option value=doc>Documentation
-									<option value=chiv>Chivalry &amp; Etiquette
-								</select>
-							</div>
-							<div>
-								<dt><label for=block3>Block 3:<br />13:00 Start</label>
-								<dd><select name=block3 id=block3>
-									<option value="" selected>Free Block
-									<option value=thread>Drawn Threadwork
-									<option value=uncial>Uncial
-									<option value=calc>Calculus
-									<option value=bardic>Bardic Arts
-								</select>
-							</div>
-							<div>
-								<dt><label for=block4>Block 4:<br />15:00 Start</label>
-								<dd><select name=block4 id=block4>
-									<option value="" selected>Free Block
-									<option value=sprang>Språng
-									<option value=runes>Read/Write Runes
-									<option value=book>Concealment Book
-									<option value=dance>Italian Dance
-								</select>
-							</div>
-							<div>
-								<dt><label for=block5>Block 5:<br />16:00 Start</label>
-								<dd><select name=block5 id=block5>
-									<option value="" selected>Free Block
-									<option value=survive>Surviving Events
-								</select>
-							</div>
-						</dl>
-					</fieldset>
-					<fieldset class=classes>
-						<legend>Sunday</legend>
-						
-						<dl>
-							<div>
-								<dt><label for=block6>Block 6:<br />9:00 Start</label>
-								<dd><select name=block6 id=block6>
-									<option value="" selected>Free Block
-									<option value=tstitch>Bayeux Stitch
-									<option value=vice>Cards &amp; Dice
-									<option value=flatcap>Tudor Flat Cap
-									<option value=spoons>Spoon Carving
-								</select>
-							</div>
-							<div>
-								<dt><label for=block7>Block 7:<br />11:00 Start</label>
-								<dd><select name=block7 id=block7>
-									<option value="" selected>Free Block
-									<option value=chevron>Fingerweaving Chevrons
-									<option value=charter>Charter Design
-									<option value=ice>Ice in the Desert
-								</select>
-							</div>
-						</dl>
-					</fieldset>
-					
-					<!-- Total cost and submit/reset -->
-					<fieldset class=totals>
-						<label>Total $:</label>
-						<input type=text id=price readonly>
-						<input type=hidden name=cost id=cost value=0>
-						<input type=submit value=Submit>
-					</fieldset>
-				</fieldset>
+				<dl>
+					<div>
+						<dt><label for=block1>Block 1:<br />9:00 Start</label>
+						<dd><select name=block1 id=block1>
+							<option value="" selected>Free Block
+							<option value=fweave>Fingerweaving
+							<option value=chpaint>Charter Painting
+							<option value=thobe>Patterning a Thobe
+							<option value=bowstr>Flemish Bowstring
+						</select>
+					</div>
+					<div>
+						<dt><label for=block2>Block 2:<br />11:00 Start</label>
+						<dd><select name=block2 id=block2>
+							<option value="" selected>Free Block
+							<option value=butt>Buttons
+							<option value=calig>Spacing for Calligraphy
+							<option value=doc>Documentation
+							<option value=chiv>Chivalry &amp; Etiquette
+						</select>
+					</div>
+					<div>
+						<dt><label for=block3>Block 3:<br />13:00 Start</label>
+						<dd><select name=block3 id=block3>
+							<option value="" selected>Free Block
+							<option value=thread>Drawn Threadwork
+							<option value=uncial>Uncial
+							<option value=calc>Calculus
+							<option value=bardic>Bardic Arts
+						</select>
+					</div>
+					<div>
+						<dt><label for=block4>Block 4:<br />15:00 Start</label>
+						<dd><select name=block4 id=block4>
+							<option value="" selected>Free Block
+							<option value=sprang>Språng
+							<option value=runes>Read/Write Runes
+							<option value=book>Concealment Book
+							<option value=dance>Italian Dance
+						</select>
+					</div>
+					<div>
+						<dt><label for=block5>Block 5:<br />16:00 Start</label>
+						<dd><select name=block5 id=block5>
+							<option value="" selected>Free Block
+							<option value=survive>Surviving Events
+						</select>
+					</div>
+				</dl>
 			</fieldset>
+			
+			<fieldset class=day>
+				<legend>Sunday</legend>
+				
+				<dl>
+					<div>
+						<dt><label for=block6>Block 6:<br />9:00 Start</label>
+						<dd><select name=block6 id=block6>
+							<option value="">Free Block
+							<option value=tstitch>Bayeux Stitch
+							<option value=vice>Cards &amp; Dice
+							<option value=flatcap>Tudor Flat Cap
+							<option value=spoons>Spoon Carving
+						</select>
+					</div>
+					<div>
+						<dt><label for=block7>Block 7:<br />11:00 Start</label>
+						<dd><select name=block7 id=block7>
+							<option value="">Free Block
+							<option value=chevron>Fingerweaving Chevrons
+							<option value=charter>Charter Design
+							<option value=ice>Ice in the Desert
+						</select>
+					</div>
+				</dl>
+			</fieldset>
+			
+			<!-- Total cost and submit/reset -->
+			<fieldset class=totals>
+				<label>Total $:</label>
+				<input type=text id=price readonly>
+				<button type=submit>Submit</button>
+			</fieldset>
+		</fieldset>
 	</form>
 </section>
 <!-- END OF REGISTRATION CODE-->
