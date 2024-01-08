@@ -47,8 +47,8 @@ try {
 	$mail->Password   = "";  // The password to authenticate with.
 	
 	$mail->AddAddress($_POST['email'], 'Student');  // XXX: Harden
-	$mail->AddAddress('<!-- YOUR EMAIL HERE -->', 'Class Organizer');
-	$mail->SetFrom('<!-- YOUR EMAIL HERE -->', 'Class Organizer');
+	$mail->AddAddress('hartwood.tutr@tirrigh.org', 'Dean');
+	$mail->SetFrom('hartwood.tutr@tirrigh.org', 'Dean');
 	$mail->Subject = '[Hartwood TUTR 2024] Registration ID: ' . $transactID;
 	$mail->AltBody = 'To view the message, please use an HTML compatible email viewer!';
 	
@@ -71,21 +71,16 @@ try {
 		</style>
 	</head>
 	<body>
-		<?= print_r($_POST); ?><!-- For testing purposes -->
-		<h3><!-- NAME OF EVENT --></h3>
-		<h4><!-- LOCATION, DATE --></h4>
+		<h3>Hartwood TUTR, 2024</h3>
+		<h4>Nanaimo Navy League of Canada Hall, Feb 2-4</h4>
 		<p style="clear:left; margin-top: 15px;">
-			Thank you for your registration! Our Registrar has been notified of your selections, and will confirm class availability via an email to <?= $_POST['email']; ?>. Students will pay the instructors directly at the beginning of class. Please bring exact cash if at all possible.
-		<p>
-			An event fee of <!-- FEE--> will be charged at gate; those with proof of SCA membership will receive a $5 discount. The event will be held at the Navy League of Canada Hall at 949 5th St, Nanaimo, BC V9R, Canada.
+			Thank you for your registration! Our Dean has been notified of your selections, and will confirm class availability via an email to <?= $_POST['email']; ?>. Students will pay the instructors directly at the beginning of class. Please bring exact cash if at all possible.
 		<p>
 			For enquiries about classes, contact the registrar <a href="mailto:hartwood.tutr@tirrigh.org">by email</a>. For enquiries about the event itself, please email or visit the <a href="https://fb.me/e/4ZIiJU1js">Facebook page</a> for additional site details and contacts.
 		<p>
 			We look forward to seeing you there!
+		<h3 class="header underline">Registration</h3>
 		<table>
-			<tr>
-				<th class="header underline" colspan="2">Registration</th>
-			</tr>
 			<tr>
 				<th class="header">Order ID:</th>
 				<td><?= $transactID; ?></td>
@@ -114,12 +109,9 @@ try {
 				<th class="header">Email:</th>
 				<td><?= $_POST['email']; ?></td>
 			</tr>
-			<tr>
-				<th class="header underline" colspan="2">Saturday Classes</th>
-			</tr>
 		</table>
 			<!-- Display class selections below. There must be one TR unit per drop-down on code.ph, and the label you use with _POST must match the ID of the select you're calling. -->
-		<h3>Saturday, Feb 3rd</h3>
+		<h3 class="header underline">Saturday, Feb 3rd</h3>
 		<table>
 			<tr>
 				<th class="header">09:00</th>
@@ -142,7 +134,7 @@ try {
 				<td><?= $courses[$_POST['block5']]; ?></td>
 			</tr>
 		</table>
-		<h3>Sunday, Feb 4rd</h3>
+		<h3 class="header underline">Sunday, Feb 4rd</h3>
 		<table>
 			<tr>
 				<th class="header">09:00</th>
@@ -170,7 +162,7 @@ try {
 }
 
 ?>
-<p><a href="<!-- YOUR REGISTRATION PAGE ADDRESS HERE-->" class=back>Back</a>
+<p><a href="index.php" class=back>Back</a>
 </body>
 </html>
 

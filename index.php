@@ -33,7 +33,7 @@ function dropdowns(block) {
 <p>
 	Registration closes January 30 (unless otherwise noted in the class description) to give instructors time to prepare materials and handouts. Students will pay the instructors directly at the beginning of class. Please bring exact cash if at all possible.
 <p>
-	If you have questions, please <a href="mailto:hartwood.tutr@tirrigh.org?subject=TUTR-2024">e-mail the registrar</a> or post your inquiry to the <a href="https://fb.me/e/4ZIiJU1js">Hartwood TUTR 2024 Facebook page</a>.
+	If you have questions, please <a href="mailto:hartwood.tutr@tirrigh.org?subject=TUTR-2024">e-mail the Dean</a> or post your inquiry to the <a href="https://fb.me/e/4ZIiJU1js">Hartwood TUTR 2024 Facebook page</a>.
 <p>
 
 <section id=calendar>
@@ -100,7 +100,7 @@ function dropdowns(block) {
 		</tr>
 		<tr>
 			<th>9:00</th>
-			<td rowspan=2><a href="#tstitch">Tapestry Stitch</a></td>
+			<td rowspan=2><a href="#tstitch">Bayeux Tapestry Stitch</a></td>
 			<td rowspan=2><a href="#vice">Vice with Cards &amp; Dice</a></td>
 			<td rowspan=2><a href="#flatcap">Tudor/Renaissance Flat Cap</a></td>
 			<td rowspan=2><a href="#spoons">Intro to Spoon Carving</a></td>
@@ -253,7 +253,7 @@ function dropdowns(block) {
 		
 		<h3>Requirements/Materials</h3>
 		<ul>
-			<li>students should bring their own bows (important if you want a usable bow string
+			<li>students should bring their own bows (important if you want a usable bow string)
 		</ul>
 	</details>
 
