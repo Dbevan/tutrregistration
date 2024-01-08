@@ -976,8 +976,8 @@ function dropdowns(block) {
 					<!-- Total cost and submit/reset -->
 					<fieldset class=totals>
 						<label>Total $:</label>
-						<input type=text name=cost id=cost readonly>
-						<input type=hidden name=hiddencost id=hiddencost value=0>
+						<input type=text id=price readonly>
+						<input type=hidden name=cost id=cost value=0>
 						<input type=submit value=Submit>
 					</fieldset>
 				</fieldset>

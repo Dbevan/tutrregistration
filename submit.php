@@ -3,6 +3,7 @@
 <?php
 
 $courses = array(
+		"" => "Free Block",
 		"fweave" => "Intro to Fingerweaving",
 		"chpaint" => "Intro to Charter Painting",
 		"thobe" => "Patterning a Thobe",
@@ -152,12 +153,8 @@ try {
 				<td><?= $courses[$_POST['block7']]; ?></td>
 			</tr>
 			
-			<!-- Copy and paste for additional class blocks ABOVE this line -->
-			<tr>
-				<th class="header">Total:</th>
-				<td>&#36;<?= $_POST['cost']; ?></td>
-			</tr>
 		</table>
+		<h3>Total: $<?= $_POST['cost']; ?></h3>
 	</body>
 </html>
 <?

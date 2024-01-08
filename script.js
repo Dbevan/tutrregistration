@@ -3,7 +3,8 @@
 	
 	function clear_form() {  // Reset values to defaults on page (re)load.
 		cost.value = "0"
-		cost.disabled = true
+		price.value = "0"
+		price.disabled = true
 		
 		for ( let elem of document.querySelectorAll('.block') )
 			elem.value = 'Free Block'
@@ -22,7 +23,8 @@
 		for ( let elem of document.querySelectorAll('.classes select') )
 			total += parseFloat(document.getElementById(elem.value) ? document.getElementById(elem.value).dataset.price : 0)
 		
-		cost.value = total
+		price.value = total  // Price is for display purposes.
+		cost.value = total  // Cost is submitted with the form.
 	}
 	
 	function validate_email(address) {
