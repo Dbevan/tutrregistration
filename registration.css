@@ -50,41 +50,64 @@ form { margin-top: 10px; }  /* You can specify the form's width here, otherwise 
 label { font-weight: bold; display: block; padding-left: 2px; font-size: 90%; }
 input { margin-bottom: 5px; }
 select { width: 210px; margin-right: 10px; margin-bottom: 10px; }
-fieldset { border: 2px solid #ddd; }
 
 #registration {
 	input { width: 100%; box-sizing: border-box; }
 	
-	> fieldset > dl dd { margin-left: 0; }
-	
-	/*
-	> fieldset > dl {
-		display: flex;
-
-		& > div {
-			flex: 1 1;
+	> fieldset {
+		border: 2px solid #ddd;
+		padding: 10px;
+		
+		fieldset {
+			border: none;
+			padding: 0;
+			
+			 { margin-top: 10px; }
+		}
+		
+		> dl {
 			display: flex;
 			flex-direction: column;
+			padding: 0;
+			margin: 0;
 			
-			+ div, dt:not(:first-child) { margin-top: 1em; }
+			.field {
+				flex: 1 1;
+				
+				+ .field {
+					margin-left: 10px;
+				}
+			}
+			
+			> div {
+				display: flex;
+				+ div { margin-top: 10px; }
+			}
 			dd { margin-left: 0; }
 		}
 	}
-	*/
-
-	.classes {
-		border: none;
-
-		legend { text-align:center; width: 100%; font-weight: bold; color: black; font-family:'Georgia', 'Serif'; border-bottom: 2px solid #eee; }
-
+	
+	.day {
+		margin-top: 10px;
+		
+		legend { text-align:center; width: 100%; font-weight: bold; color: black; font-family:'Georgia', 'Serif'; border-bottom: 2px solid #eee; margin-bottom: 10px; }
+		
 		dl {
 			display: flex;
 			flex-wrap: wrap;
-
+			margin: 0;
+			padding: 0;
+			
 			div { flex: 0 1; width: fit-content; }
 			dd { margin-left: 0; }
 		}
-
+	}
+	
+	.totals {
+		display: flex;
+		label { width: fit-content; white-space: pre; }
+		input { max-width: 33vw; margin-right: 10px; }
+		button { width: 210px; }
 	}
 }
 
